@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Job Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2><i class="fas fa-briefcase"></i> Job Admin</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active" onclick="showSection('add-job', this)">
+                        <i class="fas fa-plus-circle"></i> Add Job Post
+                    </li>
+                    <li onclick="showSection('list-jobs', this)">
+                        <i class="fas fa-list"></i> List Active Jobs
+                    </li>
+                    <li onclick="showSection('contact-data', this)">
+                        <i class="fas fa-envelope"></i> Contact Form Data
+                    </li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span>Welcome, Admin</span>
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="User">
+                </div>
+            </header>
+
+            <!-- SECTION 1: Add Job Post -->
+            <section id="add-job" class="content-section active">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Create New Job Post</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="jobForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Job Title (Marathi/English)</label>
+                                    <input type="text" id="jobTitle" placeholder="e.g. Talathi Bharti 2025" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Department / Company</label>
+                                    <input type="text" id="department" placeholder="e.g. Maharashtra Revenue Dept"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Location</label>
+                                    <input type="text" id="location" placeholder="e.g. All Maharashtra">
+                                </div>
+                                <div class="form-group">
+                                    <label>Total Vacancy</label>
+                                    <input type="text" id="vacancy" placeholder="e.g. 4500 Posts">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Salary (Pay Scale)</label>
+                                    <input type="text" id="salary" placeholder="e.g. ₹25,000 - ₹80,000">
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Date to Apply</label>
+                                    <input type="date" id="lastDate" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Apply Link</label>
+                                <input type="url" id="applyLink" placeholder="https://..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Short Description (For SEO & Lists)</label>
+                                <textarea id="shortDesc" rows="3"
+                                    placeholder="Brief summary for the home page card..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Full Job Description (HTML Supported)</label>
+                                <textarea id="fullDesc" rows="8"
+                                    placeholder="Enter detailed educational qualification, age limit, etc."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary">Publish Job</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: List Active Jobs -->
+            <section id="list-jobs" class="content-section" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Active Jobs</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Job Title</th>
+                                    <th>Department</th>
+                                    <th>Last Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="jobListBody">
+                                <!-- Data will be populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Contact Form Data -->
+            <section id="contact-data" class="content-section" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Contact Form Submissions</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Message</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contactListBody">
+                                <!-- Dummy Data -->
+                                <tr>
+                                    <td>2025-12-26</td>
+                                    <td>Rahul Patil</td>
+                                    <td>rahul@example.com</td>
+                                    <td>Please update the Talathi syllabus link.</td>
+                                    <td><button class="btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2025-12-27</td>
+                                    <td>Priya Deshmukh</td>
+                                    <td>priya@test.com</td>
+                                    <td>Is the age limit increased for OBC?</td>
+                                    <td><button class="btn-delete">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+
+</html>
