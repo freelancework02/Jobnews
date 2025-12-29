@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error('Failed to fetch jobs');
 
             const jobs = await response.json();
+            console.log("Job listing is ", jobs)
             tbody.innerHTML = ''; // Clear loading message
 
             if (!jobs || jobs.length === 0) {
