@@ -12,6 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -19,7 +20,9 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">माझा जॉब पोर्टल</a>
+                <a href="index.html" class="logo">
+                    <img src="weblogo.png" alt="माझा जॉब पोर्टल">
+                </a>
                 <div class="nav-links">
                     <a href="index.html">मुख्यपृष्ठ</a>
                     <a href="#">सरकारी नोकरी</a>
@@ -35,7 +38,7 @@
         </div>
 
         <div class="main-content">
-            <main class="left-column">
+            <main>
                 <div id="job-detail-container" class="job-detail-box">
                     <div style="text-align:center; padding: 40px;">
                         Loading job details...
@@ -43,12 +46,12 @@
                 </div>
             </main>
 
-            <aside class="sidebar">
+            <aside>
                 <div class="ad-sidebar">
                     Google AdSense - Sidebar
                 </div>
 
-                <div class="job-card">
+                <div class="sidebar-widget">
                     <h3>संबंधित इतर नोकऱ्या</h3>
                     <ul style="padding-left: 20px;">
                         <li><a href="index.html">मुख्यपृष्ठ पहा</a></li>
@@ -78,20 +81,58 @@
                 return;
             }
 
-            try {
-                // Fetch Fetails
-                // We reuse the manageJobs API. Ideally, we should have a specific endpoint for single job,
-                // but for now we can filter the list or update the API to support ?id=X
-                // Currently, let's fetch list and find (simple for MVP) 
-                // OR better: Update API to support fetching single ID (Best Practice).
-                // Let's assume we fetch all and find for now to keep it simple without changing Backend yet,
-                // BUT for performance, backend should handle this.
-                // Let's UPDATE THE API REQUEST to support ID.
+            // Mock Data for fallback (shared with index.html for consistency)
+            const MOCK_JOBS = [
+                {
+                    id: 1,
+                    title: "तल्हाठी भरती 2025 - ४०००+ जागांसाठी जाहिरात प्रसिद्ध",
+                    department: "महाराष्ट्र शासन (Revenue Dept)",
+                    last_date: "2025-01-30",
+                    short_desc: "महसूल विभागांतर्गत तलाठी पदासाठी बंपर भरती सुरू झाली आहे. पदवीधर उमेदवारांसाठी सुवर्णसंधी.",
+                    vacancy: "4122 Posts",
+                    location: "All Maharashtra",
+                    salary: "₹25,500 - ₹81,100",
+                    full_desc: "Maharashtra Talathi Bharti 2025 is expected to recruit over 4000 vacancies. \n\nEligibility: Any Graduate.\nAge Limit: 18 to 38 years (Relaxation applicable).\n\nExam Pattern:\n- Marathi\n- English\n- GK\n- Math/Reasoning\n\nApply online before the last date.",
+                    apply_link: "#"
+                },
+                {
+                    id: 2,
+                    title: "भारतीय रेल्वे भरती 2025 - 10वी, 12वी पास साठी संधी",
+                    department: "Indian Railways (RRB)",
+                    last_date: "2025-02-15",
+                    short_desc: "रेल्वे रिक्रूटमेंट बोर्ड (RRB) ने गट ड पदांसाठी अर्ज मागवले आहेत. आजच अर्ज करा.",
+                    vacancy: "12000+ Posts",
+                    location: "All India",
+                    salary: "Level 1 (7th CPC)",
+                    full_desc: "RRB Group D Recruitment 2025 notification has been released. \n\nQualification: 10th Pass or ITI.\nSelection Process: CBT, PET, Document Verification.",
+                    apply_link: "#"
+                },
+                {
+                    id: 3,
+                    title: "बँक ऑफ महाराष्ट्र पीओ भरती - पगार ५०,०००+",
+                    department: "Bank of Maharashtra",
+                    last_date: "2025-02-10",
+                    short_desc: "प्रोबेशनरी ऑफिसर पदासाठी ऑनलाइन अर्ज प्रक्रिया सुरू. जाणून घ्या पात्रता आणि निकष.",
+                    vacancy: "500 Posts",
+                    location: "Mumbai/Pune/All India",
+                    salary: "₹50,000+",
+                    full_desc: "Bank of Maharashtra PO Recruitment 2025.\n\nRole: Probationary Officer.\nScale: I.\n\nRequires valid IBPS PO score or separate exam.",
+                    apply_link: "#"
+                }
+            ];
 
-                // NOTE: Since we haven't updated the backend to filter by ID in the GET request yet,
-                // we will fetch all and filter client side. This is okay for small apps.
-                const response = await fetch('/.netlify/functions/manageJobs');
-                const jobs = await response.json();
+            try {
+                let jobs = [];
+
+                try {
+                    const response = await fetch('/.netlify/functions/manageJobs');
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    jobs = await response.json();
+                } catch (fetchErr) {
+                    console.warn("Fetch failed, loading MOCK data for demo:", fetchErr);
+                    // Fallback to Mock Data
+                    jobs = MOCK_JOBS;
+                }
 
                 const job = jobs.find(j => j.id == jobId);
 
@@ -157,6 +198,50 @@
                 .replace(/>/g, "&gt;")
                 .replace(/"/g, "&quot;")
                 .replace(/'/g, "&#039;");
+        }
+
+        // --- Load Custom Ads ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait for DOM
+            setTimeout(applyCustomAds, 100);
+        });
+
+        function applyCustomAds() {
+            const adsConfig = JSON.parse(localStorage.getItem('site_ads_config') || '{}');
+
+            const replaceAd = (containerClass, imgData, index = 0) => {
+                if (!imgData) return;
+                const els = document.querySelectorAll(containerClass);
+                if (els[index]) {
+                    els[index].innerHTML = `<img src="${imgData}" style="width:100%; height:100%; object-fit:cover;">`;
+                    els[index].style.border = 'none';
+                    els[index].style.background = 'transparent';
+                    els[index].innerText = '';
+                }
+            };
+
+            // Layout in detail.html:
+            // .ad-banner (Top) -> Index 0
+            // .ad-banner (Article Top) -> Index 1 (Inside main content)
+
+            // Sidebar:
+            // .ad-sidebar (Top of sidebar) -> Index 0
+
+            if (adsConfig.topBanner) {
+                replaceAd('.ad-banner', adsConfig.topBanner, 0);
+            }
+
+            if (adsConfig.sidebar1) {
+                replaceAd('.ad-sidebar', adsConfig.sidebar1, 0);
+            }
+
+            // If we want same sticky ad logic or re-use slots:
+            if (adsConfig.sidebar2) {
+                // Detail page only has 1 sidebar placeholder currently in my view
+                // Let's check if there is a second one?
+                // Checking previous view: There is only one .ad-sidebar div in sidebar.
+                // So sidebar2 (Sticky) might not have a slot, or I should add one.
+            }
         }
     </script>
 

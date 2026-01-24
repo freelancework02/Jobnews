@@ -30,6 +30,9 @@
                     <li onclick="showSection('contact-data', this)">
                         <i class="fas fa-envelope"></i> Contact Form Data
                     </li>
+                    <li onclick="showSection('manage-ads', this)">
+                        <i class="fas fa-ad"></i> Manage Ads
+                    </li>
                 </ul>
             </nav>
             <div class="logout">
@@ -46,6 +49,68 @@
                     <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="User">
                 </div>
             </header>
+
+            <!-- SECTION 4: Manage Ads (New) -->
+            <section id="manage-ads" class="content-section" style="display: none;">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Website Advertisement Banners</h3>
+                    </div>
+                    <div class="card-body">
+                        <p
+                            style="margin-bottom: 20px; color: #666; font-size: 0.9rem; background: #fff3cd; padding: 10px; border-left: 4px solid #ffc107;">
+                            <strong>Note:</strong> Uploaded images are saved locally for this demo. In a live production
+                            environment, these would be uploaded to a cloud storage server.
+                        </p>
+
+                        <form id="adsForm">
+                            <!-- Top Banner -->
+                            <div class="form-group">
+                                <label>Top Leaderboard Banner</label>
+                                <p class="text-xs text-gray-500 mb-2">Recommended Size: <strong>728x90 pixels</strong>
+                                </p>
+                                <input type="file" id="adTopBanner" accept="image/*">
+                                <div class="preview-box" id="previewTopBanner"
+                                    style="margin-top:10px; border:1px dashed #ccc; padding:10px; display:none;">
+                                    <img src="" style="max-width: 100%; height: auto;">
+                                </div>
+                            </div>
+
+                            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+
+                            <div class="form-row">
+                                <!-- Sidebar Ad 1 -->
+                                <div class="form-group">
+                                    <label>Sidebar Square Ad</label>
+                                    <p class="text-xs text-gray-500 mb-2">Recommended Size: <strong>300x250
+                                            pixels</strong></p>
+                                    <input type="file" id="adSidebar1" accept="image/*">
+                                    <div class="preview-box" id="previewSidebar1"
+                                        style="margin-top:10px; border:1px dashed #ccc; padding:10px; display:none;">
+                                        <img src="" style="max-width: 100%; height: auto;">
+                                    </div>
+                                </div>
+
+                                <!-- Sidebar Ad 2 -->
+                                <div class="form-group">
+                                    <label>Sidebar Sticky Ad (Tall)</label>
+                                    <p class="text-xs text-gray-500 mb-2">Recommended Size: <strong>300x600
+                                            pixels</strong> or 300x250</p>
+                                    <input type="file" id="adSidebar2" accept="image/*">
+                                    <div class="preview-box" id="previewSidebar2"
+                                        style="margin-top:10px; border:1px dashed #ccc; padding:10px; display:none;">
+                                        <img src="" style="max-width: 100%; height: auto;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-primary">Save Ad Settings</button>
+                            <button type="button" id="clearAdsBtn" class="btn-delete" style="margin-left: 10px;">Clear
+                                All Ads</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
 
             <!-- SECTION 1: Add Job Post -->
             <section id="add-job" class="content-section active">

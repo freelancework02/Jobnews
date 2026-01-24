@@ -1,7 +1,9 @@
-/* admin-style.css */
+/* admin-style.css - Professional Admin Theme */
 :root {
-    --primary: #1e293b;
-    --secondary: #3b82f6;
+    --primary: #003366;
+    /* Matching Govt Blue */
+    --secondary: #0056b3;
+    /* Matching Lighter Blue */
     --bg-color: #f1f5f9;
     --white: #ffffff;
     --text-color: #334155;
@@ -166,7 +168,8 @@ textarea:focus {
 }
 
 .btn-primary:hover {
-    background-color: #2563eb;
+    background-color: #003d80;
+    /* Darker secondary */
 }
 
 /* Tables */
