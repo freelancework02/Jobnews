@@ -290,4 +290,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (adsConfig.sidebar2) showPreview(adsConfig.sidebar2, 'previewSidebar2');
     }
 
+
+
+    // --- 6. Logout Logic ---
+    const logoutBtn = document.querySelector('.logout a');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (confirm('Are you sure you want to logout?')) {
+                localStorage.removeItem('admin_auth');
+                window.location.href = 'login.html';
+            }
+        });
+    }
+
 });

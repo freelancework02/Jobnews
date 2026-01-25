@@ -17,127 +17,181 @@
 
 <body>
 
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span id="currentDate"></span>
+            <div class="social-tiny">
+                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-facebook"></i></a>
+                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-twitter"></i></a>
+                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
     <header>
         <div class="container">
-            <nav>
+            <div class="header-inner">
                 <a href="index.html" class="logo">
-                    <img src="weblogo.png" alt="माझा जॉब पोर्टल">
+                    <img src="weblogo.png" alt="MahaJobPortal Logo">
                 </a>
-                <div class="nav-links">
-                    <a href="index.html">मुख्यपृष्ठ</a>
-                    <a href="#">सरकारी नोकरी</a>
-                </div>
-            </nav>
+                <!-- Optional Header Ad Slot -->
+                <div class="header-ad"></div>
+            </div>
         </div>
     </header>
 
+    <!-- Sticky Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> मुख्यपृष्ठ</a></li>
+                <li><a href="coming-soon.html">नवीन जाहिराती</a></li>
+                <li><a href="coming-soon.html">प्रवेशपत्र (Admit Card)</a></li>
+                <li><a href="coming-soon.html">निकाल (Results)</a></li>
+                <li><a href="coming-soon.html">अभ्यासक्रम (Syllabus)</a></li>
+                <li><a href="coming-soon.html">वर्तमान नोकरी</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
     <div class="container">
-        <!-- Top Ad -->
-        <div class="ad-banner">
-            Google AdSense - Leaderboard
+
+        <!-- Breadcrumb -->
+        <div style="padding: 15px 0; font-size: 0.9rem; color: var(--text-light);">
+            <a href="index.html" style="text-decoration:none; color:var(--text-light);">Home</a> <i
+                class="fas fa-angle-right" style="font-size:0.8rem; margin:0 5px;"></i>
+            <span style="color:var(--secondary-color);">Job Details</span>
         </div>
 
-        <div class="main-content">
+        <!-- Top Ad (Leaderboard) -->
+        <div class="ad-slot-container">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-banner ad-placeholder">
+                <span>Top Banner (728x90)</span>
+            </div>
+        </div>
+
+        <div class="portal-grid">
+
+            <!-- Main Content Area -->
             <main>
+                <!-- Dynamic Content Container -->
                 <div id="job-detail-container" class="job-detail-box">
                     <div style="text-align:center; padding: 40px;">
-                        Loading job details...
+                        <i class="fas fa-spinner fa-spin" style="font-size:2rem; color:var(--primary-color);"></i>
+                        <p style="margin-top:10px;">Loading job details...</p>
+                    </div>
+                </div>
+
+                <!-- In-Feed Ad Slot (Below Content) -->
+                <div class="ad-slot-container" style="margin-top: 30px;">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-banner ad-placeholder">
+                        <span>Bottom Content Ad</span>
                     </div>
                 </div>
             </main>
 
+            <!-- Sidebar -->
             <aside>
-                <div class="ad-sidebar">
-                    Google AdSense - Sidebar
+                <!-- Sidebar Ad 1 -->
+                <div class="ad-slot-container">
+                    <div class="ad-label">Sponsored</div>
+                    <div class="ad-sidebar ad-placeholder">
+                        <span>Sidebar Ad 1 (300x250)</span>
+                    </div>
                 </div>
 
+                <!-- WhatsApp Widget -->
                 <div class="sidebar-widget">
-                    <h3>संबंधित इतर नोकऱ्या</h3>
-                    <ul style="padding-left: 20px;">
-                        <li><a href="index.html">मुख्यपृष्ठ पहा</a></li>
-                    </ul>
+                    <div class="widget-title"><i class="fab fa-whatsapp"></i> WhatsApp Updates</div>
+                    <div class="widget-body">
+                        <div class="whatsapp-box">
+                            <p style="margin:0 0 10px; font-weight:600; color:#333;">Get Daily Job Updates on WhatsApp!
+                            </p>
+                            <a href="#" class="whatsapp-btn">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Links -->
+                <div class="sidebar-widget">
+                    <div class="widget-title"><i class="fas fa-link"></i> महत्त्वपूर्ण लिंक्स</div>
+                    <div class="widget-body" style="padding:0;">
+                        <a href="coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Hall Ticket
+                            Download</a>
+                        <a href="coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Current
+                            Affairs 2025</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Ad 2 -->
+                <div class="ad-slot-container">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-sidebar ad-placeholder">
+                        <span>Sidebar Ad 2 (300x600)</span>
+                    </div>
                 </div>
             </aside>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 माझा जॉब पोर्टल.</p>
+            <div class="copyright">
+                <p>&copy; 2025 माझा जॉब पोर्टल. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Script to Load Job Details -->
     <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            const container = document.getElementById('job-detail-container');
+        // Set Date in Top Bar
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const dateEl = document.getElementById('currentDate');
+        if (dateEl) dateEl.innerText = new Date().toLocaleDateString('mr-IN', options);
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const container = document.getElementById("job-detail-container");
 
             // Get ID from URL
             const urlParams = new URLSearchParams(window.location.search);
             const jobId = urlParams.get('id');
 
             if (!jobId) {
-                container.innerHTML = '<p style="text-align:center;">Job ID missing. <a href="index.html">Go Home</a></p>';
+                container.innerHTML = '<div style="text-align:center; padding:50px;">Job ID missing. <a href="index.html" class="btn-details">Go Home</a></div>';
                 return;
             }
 
-            // Mock Data for fallback (shared with index.html for consistency)
-            const MOCK_JOBS = [
-                {
-                    id: 1,
-                    title: "तल्हाठी भरती 2025 - ४०००+ जागांसाठी जाहिरात प्रसिद्ध",
-                    department: "महाराष्ट्र शासन (Revenue Dept)",
-                    last_date: "2025-01-30",
-                    short_desc: "महसूल विभागांतर्गत तलाठी पदासाठी बंपर भरती सुरू झाली आहे. पदवीधर उमेदवारांसाठी सुवर्णसंधी.",
-                    vacancy: "4122 Posts",
-                    location: "All Maharashtra",
-                    salary: "₹25,500 - ₹81,100",
-                    full_desc: "Maharashtra Talathi Bharti 2025 is expected to recruit over 4000 vacancies. \n\nEligibility: Any Graduate.\nAge Limit: 18 to 38 years (Relaxation applicable).\n\nExam Pattern:\n- Marathi\n- English\n- GK\n- Math/Reasoning\n\nApply online before the last date.",
-                    apply_link: "#"
-                },
-                {
-                    id: 2,
-                    title: "भारतीय रेल्वे भरती 2025 - 10वी, 12वी पास साठी संधी",
-                    department: "Indian Railways (RRB)",
-                    last_date: "2025-02-15",
-                    short_desc: "रेल्वे रिक्रूटमेंट बोर्ड (RRB) ने गट ड पदांसाठी अर्ज मागवले आहेत. आजच अर्ज करा.",
-                    vacancy: "12000+ Posts",
-                    location: "All India",
-                    salary: "Level 1 (7th CPC)",
-                    full_desc: "RRB Group D Recruitment 2025 notification has been released. \n\nQualification: 10th Pass or ITI.\nSelection Process: CBT, PET, Document Verification.",
-                    apply_link: "#"
-                },
-                {
-                    id: 3,
-                    title: "बँक ऑफ महाराष्ट्र पीओ भरती - पगार ५०,०००+",
-                    department: "Bank of Maharashtra",
-                    last_date: "2025-02-10",
-                    short_desc: "प्रोबेशनरी ऑफिसर पदासाठी ऑनलाइन अर्ज प्रक्रिया सुरू. जाणून घ्या पात्रता आणि निकष.",
-                    vacancy: "500 Posts",
-                    location: "Mumbai/Pune/All India",
-                    salary: "₹50,000+",
-                    full_desc: "Bank of Maharashtra PO Recruitment 2025.\n\nRole: Probationary Officer.\nScale: I.\n\nRequires valid IBPS PO score or separate exam.",
-                    apply_link: "#"
-                }
-            ];
+            // --- Load Custom Ads ---
+            if (typeof applyCustomAds === 'function') setTimeout(applyCustomAds, 500);
 
             try {
                 let jobs = [];
 
+                // 1. Try Fetching from Server
                 try {
                     const response = await fetch('/.netlify/functions/manageJobs');
-                    if (!response.ok) throw new Error("Network response was not ok");
+                    if (!response.ok) throw new Error("Backend connection failed");
                     jobs = await response.json();
                 } catch (fetchErr) {
-                    console.warn("Fetch failed, loading MOCK data for demo:", fetchErr);
-                    // Fallback to Mock Data
-                    jobs = MOCK_JOBS;
+                    // 2. Fallback to Local Storage
+                    const localData = localStorage.getItem('mock_jobs_db');
+                    if (localData) {
+                        jobs = JSON.parse(localData);
+                    } else {
+                        throw new Error("Job not found.");
+                    }
                 }
 
                 const job = jobs.find(j => j.id == jobId);
 
                 if (!job) {
-                    container.innerHTML = '<p style="text-align:center;">Job not found. <a href="index.html">Go Home</a></p>';
+                    container.innerHTML = '<div style="text-align:center; padding:50px;">Job not found. <a href="index.html">Go Home</a></div>';
                     return;
                 }
 
@@ -145,48 +199,66 @@
                 document.title = `${job.title} - Majha Job Portal`;
 
                 // Render Content
+                const lastDate = job.last_date ? new Date(job.last_date).toLocaleDateString('mr-IN') : 'N/A';
+
                 container.innerHTML = `
-                    <h1 class="job-title">${escapeHtml(job.title)}</h1>
-                    <p class="meta-info">📅 Last Date: ${job.last_date} | 📍 ${escapeHtml(job.location)}</p>
-
-                    <div class="ad-banner" style="height: auto; min-height: 90px; margin: 10px 0;">
-                        Google AdSense - Article Top
+                <div class="job-article-header" style="border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 25px;">
+                    <span style="background:var(--secondary-color); color:white; padding:3px 10px; border-radius:4px; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; display:inline-block;"> Recruitment 2025</span>
+                    <h1 class="job-title-large" style="margin: 10px 0;">${escapeHtml(job.title)}</h1>
+                    <div style="color:var(--text-light); font-size:0.9rem;">
+                        <span style="margin-right:15px;"><i class="fas fa-building" style="color:var(--primary-color);"></i> ${escapeHtml(job.department)}</span>
+                        <span><i class="far fa-clock" style="color:var(--primary-color);"></i> Last Date: ${lastDate}</span>
                     </div>
+                </div>
 
-                    <p><strong>${escapeHtml(job.department)}</strong> has announced a new recruitment drive.</p>
+                <!-- Internal Article Ad -->
+                <div class="ad-slot-container" style="margin:20px 0;">
+                    <div class="ad-banner ad-placeholder"><span>Article Top Ad</span></div>
+                </div>
+
+                <div class="article-content" style="font-size:1.05rem; line-height:1.7; color:#333;">
+                    <p class="highlight-text" style="background:#e3f2fd; padding:15px; border-left:4px solid var(--secondary-color); border-radius:4px; font-style:italic;">
+                        <strong>Short Description:</strong> ${escapeHtml(job.short_desc)}
+                    </p>
+
+                    <p><strong>${escapeHtml(job.department)}</strong> is inviting applications for the post of <strong>${escapeHtml(job.title)}</strong>. Interested candidates can apply before <strong>${lastDate}</strong>.</p>
                     
-                    <h2>Overview</h2>
-                    <table class="info-table">
-                        <tr><th>Department</th><td>${escapeHtml(job.department)}</td></tr>
-                        <tr><th>Post Name</th><td>${escapeHtml(job.title)}</td></tr>
-                        <tr><th>Vacancy</th><td>${escapeHtml(job.vacancy)}</td></tr>
-                        <tr><th>Location</th><td>${escapeHtml(job.location)}</td></tr>
-                        <tr><th>Salary</th><td>${escapeHtml(job.salary)}</td></tr>
-                        <tr><th>Last Date</th><td>${job.last_date}</td></tr>
+                    <h3 class="section-title">Job Overview</h3>
+                    <table class="info-table" style="width:100%; border-collapse:collapse; margin:20px 0;">
+                        <tr style="border-bottom:1px solid #ddd;"><th style="padding:12px; background:#f8f9fa; width:30%; text-align:left;">Department</th><td style="padding:12px;">${escapeHtml(job.department)}</td></tr>
+                        <tr style="border-bottom:1px solid #ddd;"><th style="padding:12px; background:#f8f9fa; text-align:left;">Total Vacancy</th><td style="padding:12px;"><strong>${escapeHtml(job.vacancy)}</strong></td></tr>
+                        <tr style="border-bottom:1px solid #ddd;"><th style="padding:12px; background:#f8f9fa; text-align:left;">Location</th><td style="padding:12px;">${escapeHtml(job.location)}</td></tr>
+                        <tr style="border-bottom:1px solid #ddd;"><th style="padding:12px; background:#f8f9fa; text-align:left;">Salary (Pay Scale)</th><td style="padding:12px;">${escapeHtml(job.salary)}</td></tr>
+                        <tr style="border-bottom:1px solid #ddd;"><th style="padding:12px; background:#f8f9fa; text-align:left;">Last Date</th><td style="padding:12px; color:var(--accent-color); font-weight:bold;">${lastDate}</td></tr>
                     </table>
 
-                     <h2>Full Description</h2>
-                    <div style="line-height:1.8;">
-                        ${job.full_desc ? job.full_desc.replace(/\n/g, '<br>') : 'No details provided.'}
+                    <h3 class="section-title">Full Details & Eligibility</h3>
+                     <div style="background:#fff; padding:15px; border:1px solid #eee; border-radius:4px;">
+                        ${job.full_desc ? job.full_desc.replace(/\n/g, '<br>') : 'Refer to official notification for full details.'}
                     </div>
 
-                    <div style="text-align: center; margin: 30px 0;">
-                        <a href="https://api.whatsapp.com/send?text=*${encodeURIComponent(job.title)}*%0A%0APlease check: ${window.location.href}"
-                           target="_blank" class="share-btn-whatsapp">
-                            📱 Share on WhatsApp
+                    <!-- CTA Section -->
+                    <h3 class="section-title">Important Links</h3>
+                    <div style="display:grid; gap:15px; grid-template-columns: 1fr; margin-top:20px;">
+                         <a href="${job.apply_link}" target="_blank" class="btn-read" style="text-align:center; padding:15px; background:var(--secondary-color); font-size:1.1rem; text-decoration:none; color:white;">
+                            <i class="fas fa-mouse-pointer"></i> Apply Online Now
                         </a>
+                       
                     </div>
 
-                    <div style="text-align: center; margin-top: 20px;">
-                        <a href="${job.apply_link}" target="_blank" class="btn-read" style="padding: 15px 30px; font-size: 1.1rem; cursor: pointer;">
-                            Apply Online Now (Link)
+                     <div style="margin-top: 40px; text-align:center; padding:20px; background:#f0f4c3; border-radius:8px;">
+                        <h4 style="margin-top:0;">Share Job with Friends</h4>
+                        <a href="https://api.whatsapp.com/send?text=*${encodeURIComponent(job.title)}*%0A%0AApply Here: ${window.location.href}"
+                           target="_blank" class="share-btn-whatsapp" style="display:inline-block; width:auto; padding:10px 25px; text-decoration:none; color:green;">
+                            <i class="fab fa-whatsapp"></i> Share on WhatsApp
                         </a>
                     </div>
-                `;
+                </div>
+            `;
 
             } catch (error) {
                 console.error(error);
-                container.innerHTML = '<p style="text-align:center; color:red;">Error loading details.</p>';
+                container.innerHTML = '<div style="text-align:center; padding:50px; color:red;"><h3>Error Loading Job</h3><p>Ensure you have added jobs via Admin Panel.</p></div>';
             }
         });
 
@@ -200,12 +272,7 @@
                 .replace(/'/g, "&#039;");
         }
 
-        // --- Load Custom Ads ---
-        document.addEventListener('DOMContentLoaded', () => {
-            // Wait for DOM
-            setTimeout(applyCustomAds, 100);
-        });
-
+        // --- Custom Ads Logic (Copied from index.html) ---
         function applyCustomAds() {
             const adsConfig = JSON.parse(localStorage.getItem('site_ads_config') || '{}');
 
@@ -213,35 +280,36 @@
                 if (!imgData) return;
                 const els = document.querySelectorAll(containerClass);
                 if (els[index]) {
-                    els[index].innerHTML = `<img src="${imgData}" style="width:100%; height:100%; object-fit:cover;">`;
+                    const img = document.createElement('img');
+                    img.src = imgData;
+                    img.style.width = '100%';
+                    img.style.height = 'auto';
+                    img.style.borderRadius = '4px';
+
+                    els[index].innerHTML = '';
+                    els[index].appendChild(img);
+                    els[index].classList.remove('ad-placeholder');
                     els[index].style.border = 'none';
                     els[index].style.background = 'transparent';
-                    els[index].innerText = '';
+                    els[index].style.padding = '0';
                 }
             };
 
-            // Layout in detail.html:
-            // .ad-banner (Top) -> Index 0
-            // .ad-banner (Article Top) -> Index 1 (Inside main content)
+            // Layout mapping for Detail Page:
+            // Top Banner -> index 0 of .ad-banner
+            if (adsConfig.topBanner) replaceAd('.ad-banner', adsConfig.topBanner, 0);
 
-            // Sidebar:
-            // .ad-sidebar (Top of sidebar) -> Index 0
+            // Sidebar 1 -> index 0 of .ad-sidebar
+            if (adsConfig.sidebar1) replaceAd('.ad-sidebar', adsConfig.sidebar1, 0);
 
-            if (adsConfig.topBanner) {
-                replaceAd('.ad-banner', adsConfig.topBanner, 0);
-            }
+            // Sidebar 2 -> index 1 of .ad-sidebar
+            if (adsConfig.sidebar2) replaceAd('.ad-sidebar', adsConfig.sidebar2, 1);
 
-            if (adsConfig.sidebar1) {
-                replaceAd('.ad-sidebar', adsConfig.sidebar1, 0);
-            }
+            // Article Internal Ad (index 1 of .ad-banner) -> Use Top Banner Image or specific
+            if (adsConfig.topBanner) replaceAd('.ad-banner', adsConfig.topBanner, 1);
 
-            // If we want same sticky ad logic or re-use slots:
-            if (adsConfig.sidebar2) {
-                // Detail page only has 1 sidebar placeholder currently in my view
-                // Let's check if there is a second one?
-                // Checking previous view: There is only one .ad-sidebar div in sidebar.
-                // So sidebar2 (Sticky) might not have a slot, or I should add one.
-            }
+            // Bottom Content Ad (index 2 of .ad-banner)
+            if (adsConfig.topBanner) replaceAd('.ad-banner', adsConfig.topBanner, 2);
         }
     </script>
 

@@ -9,7 +9,7 @@
     <title>नवीन सरकारी नोकरी 2025 | Latest Govt Jobs in Maharashtra</title>
     <meta name="description"
         content="महाराष्ट्रातील सर्व सरकारी आणि खाजगी नोकर भरती, निकाल, आणि प्रवेशपत्राची माहिती मराठीत मिळवा.">
-    <meta name="keywords" content="सरकारी नोकरी, सरकारी भरती, Government Jobs Marathi, Majha Job, Talathi Bharti">
+
 
     <!-- Open Graph (For WhatsApp/Social Sharing) -->
     <meta property="og:title" content="नवीन सरकारी नोकरी 2025 - Majha Job Portal">
@@ -19,7 +19,9 @@
     <meta property="og:type" content="website">
 
     <!-- Fonts & CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -29,58 +31,134 @@
 
 <body>
 
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span id="currentDate"></span>
+            <div class="social-tiny">
+                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-facebook"></i></a>
+                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-twitter"></i></a>
+                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container">
-            <nav>
+            <div class="header-inner">
                 <a href="index.html" class="logo">
-                    <img src="weblogo.png" alt="माझा जॉब पोर्टल">
+                    <img src="weblogo.png" alt="MahaJobPortal Logo">
                 </a>
-                <div class="nav-links">
-                    <a href="index.html">मुख्यपृष्ठ</a>
-                    <a href="#">सरकारी नोकरी</a>
-                    <a href="#">प्रवेशपत्र</a>
-                </div>
-            </nav>
+                <!-- Optional Header Ad Slot (Hidden if empty) -->
+                <div class="header-ad"></div>
+            </div>
         </div>
     </header>
 
+    <!-- Sticky Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> मुख्यपृष्ठ</a></li>
+                <li><a href="coming-soon.html">नवीन जाहिराती</a></li>
+                <li><a href="coming-soon.html">प्रवेशपत्र (Admit Card)</a></li>
+                <li><a href="coming-soon.html">निकाल (Results)</a></li>
+                <li><a href="coming-soon.html">अभ्यासक्रम (Syllabus)</a></li>
+                <li><a href="coming-soon.html">वर्तमान नोकरी</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-label">Breaking News</div>
+        <div class="ticker-content">
+            ★ तलाठी भरती 2025 नवीन जाहिरात प्रसिद्ध ★ रेल्वे ग्रुप डी भरती अर्ज सुरू ★ MPSC राज्यसेवा पूर्व परीक्षा
+            निकाल घोषित...
+        </div>
+    </div>
+
     <div class="container">
-        <!-- Top Ad Banner -->
-        <div class="ad-banner">
-            Google AdSense - Top Leaderboard (728x90)
+
+        <!-- Top Ad Slot (Leaderboard) -->
+        <div class="ad-slot-container">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-banner ad-placeholder">
+                <!-- Ad Loaded via Script -->
+                <span>Top Banner (728x90)</span>
+            </div>
         </div>
 
-        <div class="main-content">
-            <!-- Left Column: Job List -->
-            <main class="left-column">
-                <h1 class="section-title">नवीनतम नोकर भरती (Latest Jobs)</h1>
+        <div class="portal-grid">
 
-                <div id="jobsContainer"></div>
-                <!-- In-Feed Ad Placeholder -->
-                <div class="ad-banner" style="height: 100px;">
-                    Google AdSense - In-Feed Ad
+            <!-- Main Content Area -->
+            <main>
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> नवीन भरती (Latest Recruitments)</h2>
+                    <a href="#" style="font-size:0.9rem; color:var(--text-light); text-decoration:none;">सर्व पहा
+                        &raquo;</a>
+                </div>
+
+                <!-- Job Grid -->
+                <div id="jobsContainer" class="news-grid"></div>
+
+                <!-- In-Feed Ad Slot -->
+                <div class="ad-slot-container" style="margin-top: 30px;">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-banner ad-placeholder">
+                        <span>In-Feed Ad</span>
+                    </div>
                 </div>
 
             </main>
 
-            <!-- Right Sidebar -->
+            <!-- Sidebar -->
             <aside>
-                <!-- Sidebar Ad 1 -->
-                <div class="ad-sidebar">
-                    Google AdSense - Sidebar (300x250)
+
+                <!-- Sidebar Ad 1 (Square) -->
+                <div class="ad-slot-container">
+                    <div class="ad-label">Sponsored</div>
+                    <div class="ad-sidebar ad-placeholder">
+                        <span>Sidebar Ad 1 (300x250)</span>
+                    </div>
                 </div>
 
-                <div class="sidebar-widget" style="border-left: 5px solid #25D366;">
-                    <h3>आमच्या ग्रुपला जॉईन करा</h3>
-                    <p>दररोज नवीन अपडेट्स मिळवण्यासाठी आमचा व्हॉट्सअ‍ॅप ग्रुप जॉईन करा.</p>
-                    <a href="#" class="share-btn-whatsapp">WhatsApp Group Join</a>
+                <!-- WhatsApp Widget -->
+                <div class="sidebar-widget">
+                    <div class="widget-title"><i class="fab fa-whatsapp"></i> WhatsApp Updates</div>
+                    <div class="widget-body">
+                        <div class="whatsapp-box">
+                            <p style="margin:0 0 10px; font-weight:600; color:#333;">Get Daily Job Updates on WhatsApp!
+                            </p>
+                            <a href="#" class="whatsapp-btn">Join Now</a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sidebar Ad 2 -->
-                <div class="ad-sidebar">
-                    Google AdSense - Sticky Ad
+                <!-- Important Links Widget -->
+                <div class="sidebar-widget">
+                    <div class="widget-title"><i class="fas fa-link"></i> महत्त्वपूर्ण लिंक्स</div>
+                    <div class="widget-body" style="padding:0;">
+                        <a href="coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Hall Ticket
+                            Download</a>
+                        <a href="coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Current
+                            Affairs 2025</a>
+                        <a href="coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Telegram
+                            Channel</a>
+                        <a href="coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Online Test
+                            Series</a>
+                    </div>
                 </div>
+
+                <!-- Sidebar Ad 2 (Sticky/Tall) -->
+                <div class="ad-slot-container">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-sidebar ad-placeholder">
+                        <span>Sidebar Ad 2 (300x600)</span>
+                    </div>
+                </div>
+
             </aside>
         </div>
     </div>
@@ -88,8 +166,34 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 माझा जॉब पोर्टल. सर्व हक्क राखीव.</p>
-            <p><a href="#">प्रायव्हसी पॉलिसी</a> | <a href="#">संपर्क</a></p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>नोकरी विभाग</h4>
+                    <ul>
+                        <li><a href="coming-soon.html">केंद्र सरकार</a></li>
+                        <li><a href="coming-soon.html">महाराष्ट्र शासन</a></li>
+                        <li><a href="coming-soon.html">बँक भरती</a></li>
+                        <li><a href="coming-soon.html">पोलीस भरती</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>महत्वाचे</h4>
+                    <ul>
+                        <li><a href="coming-soon.html">प्रवेशपत्र</a></li>
+                        <li><a href="coming-soon.html">निकाल</a></li>
+                        <li><a href="coming-soon.html">अभ्यासक्रम</a></li>
+                        <li><a href="coming-soon.html">संपर्क</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <p>Mahasarkarijob.in is a leading job portal in Maharashtra providing latest updates on govt jobs,
+                        exam results and admit cards.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 माझा जॉब पोर्टल. All Rights Reserved. | Designed with ❤️ in India.</p>
+            </div>
         </div>
     </footer>
 
@@ -98,104 +202,100 @@
 <script>
     const API_URL = '/.netlify/functions/manageJobs';
 
-    // Mock Data for fallback (When running locally without server or fetch fails)
-    const MOCK_JOBS = [
-        {
-            id: 1,
-            title: "तल्हाठी भरती 2025 - ४०००+ जागांसाठी जाहिरात प्रसिद्ध",
-            department: "महाराष्ट्र शासन (Revenue Dept)",
-            last_date: "2025-01-30",
-            short_desc: "महसूल विभागांतर्गत तलाठी पदासाठी बंपर भरती सुरू झाली आहे. पदवीधर उमेदवारांसाठी सुवर्णसंधी.",
-            vacancy: "4122 Posts",
-            apply_link: "#"
-        },
-        {
-            id: 2,
-            title: "भारतीय रेल्वे भरती 2025 - 10वी, 12वी पास साठी संधी",
-            department: "Indian Railways (RRB)",
-            last_date: "2025-02-15",
-            short_desc: "रेल्वे रिक्रूटमेंट बोर्ड (RRB) ने गट ड पदांसाठी अर्ज मागवले आहेत. आजच अर्ज करा.",
-            vacancy: "12000+ Posts",
-            apply_link: "#"
-        },
-        {
-            id: 3,
-            title: "बँक ऑफ महाराष्ट्र पीओ भरती - पगार ५०,०००+",
-            department: "Bank of Maharashtra",
-            last_date: "2025-02-10",
-            short_desc: "प्रोबेशनरी ऑफिसर पदासाठी ऑनलाइन अर्ज प्रक्रिया सुरू. जाणून घ्या पात्रता आणि निकष.",
-            vacancy: "500 Posts",
-            apply_link: "#"
-        }
-    ];
+    // Set Date
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('currentDate').innerText = new Date().toLocaleDateString('mr-IN', options);
 
     document.addEventListener("DOMContentLoaded", loadPublicJobs);
 
     async function loadPublicJobs() {
         const container = document.getElementById("jobsContainer");
-        container.innerHTML = `<p style="padding:20px;text-align:center;">लोड होत आहे... (Loading Jobs...)</p>`;
+        container.innerHTML = `<p style="grid-column:1/-1; text-align:center;">लोड होत आहे... (Loading Jobs...)</p>`;
 
-        // --- Load Custom Ads ---
+        // Apply Ads
         if (typeof applyCustomAds === 'function') applyCustomAds();
 
         try {
-            // Check if we are on file protocol or localhost without server
-            // In a real scenario, you try fetch first.
             let jobs = [];
 
+            // 1. Try Fetching from Server (Remote DB)
             try {
                 const res = await fetch(API_URL);
-                if (!res.ok) throw new Error("Network response was not ok");
+                if (!res.ok) throw new Error("Backend connection failed (Netlify/Supabase unreachable)");
                 jobs = await res.json();
+                console.log("[DATA SOURCE] Loaded from Server (Supabase/Netlify)");
             } catch (fetchErr) {
-                console.warn("Fetch failed, loading MOCK data for demo purpose:", fetchErr);
-                // Fallback to MOCK DATA if fetch fails (e.g. CORS or 404)
-                jobs = MOCK_JOBS;
+                console.warn("[DATA SOURCE] Server failed, falling back to LocalStorage:", fetchErr);
+
+                // 2. Fallback to Local Storage (Simulated DB)
+                const localData = localStorage.getItem('mock_jobs_db');
+                if (localData) {
+                    try {
+                        jobs = JSON.parse(localData);
+                        console.log("[DATA SOURCE] Loaded from LocalStorage (Browser DB)");
+                    } catch (e) {
+                        console.error("Error parsing LocalStorage data", e);
+                        jobs = [];
+                    }
+                } else {
+                    console.log("[DATA SOURCE] LocalStorage is empty. No jobs found.");
+                    jobs = [];
+                }
             }
 
-            console.log("Public Jobs:", jobs);
-
+            // Filter for only 'Active' jobs if needed, but for now show all
             if (!jobs || jobs.length === 0) {
-                container.innerHTML = `<p style="padding:20px;text-align:center;">सध्या कोणतीही भरती उपलब्ध नाही.</p>`;
+                container.innerHTML = `<p style="grid-column:1/-1; text-align:center; padding: 20px; background: #fff; border-radius: 4px;">
+                    सध्या कोणतीही भरती उपलब्ध नाही. (No Active Jobs Found)
+                </p>`;
                 return;
             }
 
             container.innerHTML = "";
 
+            // Sort by Date (Newest First) - assuming created_at or last_date
+            // Let's sort created_at desc if available, to show latest added top
+            jobs.sort((a, b) => {
+                const dateA = new Date(a.created_at || a.last_date || 0);
+                const dateB = new Date(b.created_at || b.last_date || 0);
+                return dateB - dateA;
+            });
+
             jobs.forEach(job => {
-                const lastDate = job.last_date
-                    ? new Date(job.last_date).toLocaleDateString("mr-IN")
-                    : "N/A";
+                const lastDate = job.last_date ? new Date(job.last_date).toLocaleDateString("mr-IN") : "N/A";
 
                 const card = document.createElement("article");
                 card.className = "job-card";
 
+                // Handle Description Length
+                const shortDesc = job.short_desc || "No description available.";
+
                 card.innerHTML = `
-                <h2>${job.title}</h2>
-
-                <div class="meta-info">
-                    <span><i class="fas fa-building"></i> ${job.department || "Govt Dept"}</span>
-                    <span><i class="fas fa-calendar-alt"></i> अंतिम दिनांक: ${lastDate}</span>
+                <div class="job-card-header">
+                    <span>${job.department || "Govt Job"}</span>
+                    <span><i class="far fa-clock"></i> ${lastDate}</span>
                 </div>
-
-                <p class="job-desc">${job.short_desc || ""}</p>
-
-                <a href="detail.html?id=${job.id}" class="btn-read">
-                    सविस्तर माहिती वाचा &raquo;
+                <div class="job-card-body">
+                    <h3><a href="detail.html?id=${job.id}">${job.title}</a></h3>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> ${job.location || "Maharashtra"}</span>
+                        <span><i class="fas fa-users"></i> ${job.vacancy || "N/A"} Posts</span>
+                    </div>
+                    <p class="job-excerpt">${shortDesc}</p>
+                </div>
+                <a href="detail.html?id=${job.id}" class="btn-details">
+                    सविस्तर माहिती पहा <i class="fas fa-arrow-right"></i>
                 </a>
-            `;
+                `;
 
                 container.appendChild(card);
             });
 
         } catch (err) {
             console.error(err);
-            container.innerHTML = `<p style="color:red;text-align:center;padding:20px;">
-            जॉब लोड करण्यात समस्या आली. (Technical Error: ${err.message})
-        </p>`;
+            container.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:red;">Technical Error.</p>`;
         }
     }
-
 
     function applyCustomAds() {
         const adsConfig = JSON.parse(localStorage.getItem('site_ads_config') || '{}');
@@ -203,25 +303,39 @@
         const replaceAd = (containerClass, imgData, index = 0) => {
             if (!imgData) return;
             const els = document.querySelectorAll(containerClass);
+
+            // Only replace if slot exists
             if (els[index]) {
-                els[index].innerHTML = `<img src="${imgData}" style="width:100%; height:100%; object-fit:cover;">`;
+                const img = document.createElement('img');
+                img.src = imgData;
+                img.style.width = '100%';
+                img.style.height = 'auto'; // Fluid height for responsive
+                img.style.display = 'block';
+                img.style.borderRadius = '4px'; /* Rounded corners for ads */
+
+                // Clear placeholder content and borders
+                els[index].innerHTML = '';
+                els[index].appendChild(img);
+                els[index].classList.remove('ad-placeholder'); // Remove grey bg and border
                 els[index].style.border = 'none';
                 els[index].style.background = 'transparent';
-                els[index].innerText = ''; // Clear text
+                els[index].style.padding = '0';
             }
         };
 
-        // 1. Top Leaderboard (First .ad-banner)
+        // 1. Top Leaderboard (.ad-banner index 0)
         if (adsConfig.topBanner) replaceAd('.ad-banner', adsConfig.topBanner, 0);
 
-        // Sidebar Ads (.ad-sidebar)
-        // 2. Sidebar Square (First .ad-sidebar)
+        // Sidebar 1 (.ad-sidebar index 0)
         if (adsConfig.sidebar1) replaceAd('.ad-sidebar', adsConfig.sidebar1, 0);
 
-        // 3. Sidebar Sticky (Second .ad-sidebar)
+        // Sidebar 2 (Sticky) (.ad-sidebar index 1)
         if (adsConfig.sidebar2) replaceAd('.ad-sidebar', adsConfig.sidebar2, 1);
+
+        // In-feed (Maybe use Top Banner image if user didn't specific separate, or leave empty)
+        // For now, let's reuse Top Banner for In-Feed to make it look full
+        if (adsConfig.topBanner) replaceAd('.ad-banner', adsConfig.topBanner, 1);
     }
 </script>
-
 
 </html>
