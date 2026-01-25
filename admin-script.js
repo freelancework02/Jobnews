@@ -1,4 +1,4 @@
-const API_URL = '/.netlify/functions/manageJobs';
+const API_URL = '/api/manageJobs';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initial Load

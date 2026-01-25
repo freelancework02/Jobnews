@@ -7,16 +7,44 @@
 
     <!-- SEO Meta Tags -->
     <title>Job Details | Majha Job Portal</title>
-    <meta property="og:title" content="नवीन सरकारी नोकरी 2025 - Majha Job Portal">
-    <meta property="og:description" content="आजच अर्ज करा! महाराष्ट्रातील नवीन भरतीची माहिती.">
-    <meta property="og:image" content="https://mahajobportal.in/images/weblogo.png">
-    <meta property="og:url" content="https://mahajobportal.in">
-    <meta property="og:type" content="website">
-    <!-- We will update SEO tags dynamically via JS if needed, but for better SEO, Server Side Rendering is preferred. 
-         For this static setup, these are placeholders. -->
+    <link rel="canonical" href="https://mahajobportal.in/detail.html" />
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#003366">
+
+    <!-- Open Graph (Dynamic Placeholders) -->
+    <meta property="og:title" content="Job Details | MahaJobPortal">
+    <meta property="og:description" content="Click to view full job details, vacancy, and application process.">
+    <meta property="og:image" content="https://mahajobportal.in/weblogo.png">
+    <meta property="og:url" content="https://mahajobportal.in/detail.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="MahaJobPortal">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Job Details | MahaJobPortal">
+    <meta name="twitter:description" content="Click to view full job details.">
+    <meta name="twitter:image" content="https://mahajobportal.in/weblogo.png">
+
+    <!-- Base Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://mahajobportal.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Job Details"
+      }]
+    }
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -27,9 +55,9 @@
         <div class="container">
             <span id="currentDate"></span>
             <div class="social-tiny">
-                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-facebook"></i></a>
-                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-twitter"></i></a>
-                <a href="coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-instagram"></i></a>
+                <a href="/coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-facebook"></i></a>
+                <a href="/coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-twitter"></i></a>
+                <a href="/coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -38,8 +66,8 @@
     <header>
         <div class="container">
             <div class="header-inner">
-                <a href="index.html" class="logo">
-                    <img src="weblogo.png" alt="MahaJobPortal Logo">
+                <a href="/index.html" class="logo">
+                    <img src="/weblogo.png" alt="MahaJobPortal Logo">
                 </a>
                 <!-- Optional Header Ad Slot -->
                 <div class="header-ad"></div>
@@ -51,12 +79,12 @@
     <nav class="main-nav">
         <div class="container">
             <ul class="nav-list">
-                <li><a href="index.html"><i class="fas fa-home"></i> मुख्यपृष्ठ</a></li>
-                <li><a href="coming-soon.html">नवीन जाहिराती</a></li>
-                <li><a href="coming-soon.html">प्रवेशपत्र (Admit Card)</a></li>
-                <li><a href="coming-soon.html">निकाल (Results)</a></li>
-                <li><a href="coming-soon.html">अभ्यासक्रम (Syllabus)</a></li>
-                <li><a href="coming-soon.html">वर्तमान नोकरी</a></li>
+                <li><a href="/index.html"><i class="fas fa-home"></i> मुख्यपृष्ठ</a></li>
+                <li><a href="/coming-soon.html">नवीन जाहिराती</a></li>
+                <li><a href="/coming-soon.html">प्रवेशपत्र (Admit Card)</a></li>
+                <li><a href="/coming-soon.html">निकाल (Results)</a></li>
+                <li><a href="/coming-soon.html">अभ्यासक्रम (Syllabus)</a></li>
+                <li><a href="/coming-soon.html">वर्तमान नोकरी</a></li>
             </ul>
         </div>
     </nav>
@@ -66,7 +94,7 @@
 
         <!-- Breadcrumb -->
         <div style="padding: 15px 0; font-size: 0.9rem; color: var(--text-light);">
-            <a href="index.html" style="text-decoration:none; color:var(--text-light);">Home</a> <i
+            <a href="/index.html" style="text-decoration:none; color:var(--text-light);">Home</a> <i
                 class="fas fa-angle-right" style="font-size:0.8rem; margin:0 5px;"></i>
             <span style="color:var(--secondary-color);">Job Details</span>
         </div>
@@ -126,9 +154,10 @@
                 <div class="sidebar-widget">
                     <div class="widget-title"><i class="fas fa-link"></i> महत्त्वपूर्ण लिंक्स</div>
                     <div class="widget-body" style="padding:0;">
-                        <a href="coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Hall Ticket
+                        <a href="/coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Hall
+                            Ticket
                             Download</a>
-                        <a href="coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Current
+                        <a href="/coming-soon.html" class="highlight-link"><i class="fas fa-angle-right"></i> Current
                             Affairs 2025</a>
                     </div>
                 </div>
@@ -164,11 +193,22 @@
             const container = document.getElementById("job-detail-container");
 
             // Get ID from URL
+            // Get ID from URL (Supports ?id=123 AND /Jobs/123/title)
             const urlParams = new URLSearchParams(window.location.search);
-            const jobId = urlParams.get('id');
+            let jobId = urlParams.get('id');
+
+            // If not in query params, try path
+            if (!jobId) {
+                const pathSegments = window.location.pathname.split('/');
+                // Expected: ["", "Jobs", "123", "title"] or similar
+                const jobsIndex = pathSegments.indexOf('Jobs');
+                if (jobsIndex !== -1 && pathSegments[jobsIndex + 1]) {
+                    jobId = pathSegments[jobsIndex + 1];
+                }
+            }
 
             if (!jobId) {
-                container.innerHTML = '<div style="text-align:center; padding:50px;">Job ID missing. <a href="index.html" class="btn-details">Go Home</a></div>';
+                container.innerHTML = '<div style="text-align:center; padding:50px;">Job ID missing. <a href="/index.html" class="btn-details">Go Home</a></div>';
                 return;
             }
 
@@ -180,7 +220,7 @@
 
                 // 1. Try Fetching from Server
                 try {
-                    const response = await fetch('/.netlify/functions/manageJobs');
+                    const response = await fetch('/api/manageJobs');
                     if (!response.ok) throw new Error("Backend connection failed");
                     jobs = await response.json();
                 } catch (fetchErr) {
@@ -196,14 +236,77 @@
                 const job = jobs.find(j => j.id == jobId);
 
                 if (!job) {
-                    container.innerHTML = '<div style="text-align:center; padding:50px;">Job not found. <a href="index.html">Go Home</a></div>';
+                    container.innerHTML = '<div style="text-align:center; padding:50px;">Job not found. <a href="/index.html">Go Home</a></div>';
                     return;
                 }
 
-                // Update Page Title
-                document.title = `${job.title} - Majha Job Portal`;
+                // Update Page Title & Meta
+                const pageTitle = `${job.title} - Majha Job Portal`;
+                document.title = pageTitle;
+
+                // Update Meta Description
+                const metaDesc = job.short_desc ? job.short_desc.substring(0, 160) : "Latest Government Job Vacancy 2025";
+                let descTag = document.querySelector('meta[name="description"]');
+                if (!descTag) {
+                    descTag = document.createElement('meta');
+                    descTag.name = "description";
+                    document.head.appendChild(descTag);
+                }
+                descTag.content = metaDesc;
+
+                // Update Canonical
+                let canonical = document.querySelector('link[rel="canonical"]');
+                const slug = job.title ? job.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '') : 'job';
+                const seoUrl = `https://mahajobportal.in/Jobs/${job.id}/${slug}`;
+
+                if (canonical) {
+                    canonical.href = seoUrl;
+                }
+
+                // Update Open Graph
+                document.querySelector('meta[property="og:title"]').content = pageTitle;
+                document.querySelector('meta[property="og:description"]').content = metaDesc;
+                document.querySelector('meta[property="og:url"]').content = seoUrl;
+
+                // Inject JobPosting Schema
+                const schemaScript = document.createElement('script');
+                schemaScript.type = 'application/ld+json';
+                const jobSchema = {
+                    "@context": "https://schema.org",
+                    "@type": "JobPosting",
+                    "title": job.title,
+                    "description": job.full_desc || job.short_desc,
+                    "datePosted": job.created_at || new Date().toISOString(),
+                    "validThrough": job.last_date ? new Date(job.last_date).toISOString() : undefined,
+                    "hiringOrganization": {
+                        "@type": "Organization",
+                        "name": job.department || "Government of Maharashtra",
+                        "sameAs": "https://mahajobportal.in"
+                    },
+                    "jobLocation": {
+                        "@type": "Place",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": job.location || "Maharashtra",
+                            "addressRegion": "Maharashtra",
+                            "addressCountry": "IN"
+                        }
+                    },
+                    "baseSalary": {
+                        "@type": "MonetaryAmount",
+                        "currency": "INR",
+                        "value": {
+                            "@type": "QuantitativeValue",
+                            "value": job.salary || "Not Disclosed",
+                            "unitText": "MONTH"
+                        }
+                    }
+                };
+                schemaScript.text = JSON.stringify(jobSchema);
+                document.head.appendChild(schemaScript);
 
                 // Render Content
+
                 const lastDate = job.last_date ? new Date(job.last_date).toLocaleDateString('mr-IN') : 'N/A';
 
                 container.innerHTML = `
@@ -260,6 +363,14 @@
                     </div>
                 </div>
             `;
+
+                // Post-Render Optimization: Lazy Load User Content Images
+                const contentImages = container.querySelectorAll('.article-content img');
+                contentImages.forEach(img => {
+                    img.setAttribute('loading', 'lazy');
+                    img.style.maxWidth = '100%';
+                    img.style.height = 'auto'; // Ensure responsive
+                });
 
             } catch (error) {
                 console.error(error);

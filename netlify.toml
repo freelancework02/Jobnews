@@ -3,14 +3,20 @@
   functions = "netlify/functions"
 
 # 1. API Rewrite
-# Redirects calls from /api/* to the /.netlify/functions/ namespace
-# status = 200 means "Rewrite" (the user URL stays /api/...)
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
 
-# 2. Daily Cron Job (Optional - If you plan to add automated tasks later)
-# [[scheduled]]
-#   path = "/.netlify/functions/cron"
-#   cron = "0 0 * * *"
+# 2. SEO Friendly Job URLs Rewrite
+# This allows /Jobs/123/title to be served by detail.html without changing the browser URL
+[[redirects]]
+  from = "/Jobs/*"
+  to = "/detail.html"
+  status = 200
+
+# 3. Fallback (Optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
