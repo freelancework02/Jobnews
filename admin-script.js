@@ -43,18 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const INITIAL_MOCK_DATA = [
         {
             id: 1,
-            title: "तल्हाठी भरती 2025 - ४०००+ जागांसाठी जाहिरात प्रसिद्ध",
+            title: "तल्हाठी भरती 2026 - ४०००+ जागांसाठी जाहिरात प्रसिद्ध",
             department: "महाराष्ट्र शासन (Revenue Dept)",
-            last_date: "2025-01-30",
+            last_date: "2026-01-30",
             short_desc: "महसूल विभागांतर्गत तलाठी पदासाठी बंपर भरती सुरू झाली आहे.",
             status: "Active",
             created_at: new Date().toISOString()
         },
         {
             id: 2,
-            title: "भारतीय रेल्वे भरती 2025",
+            title: "भारतीय रेल्वे भरती 2026",
             department: "Indian Railways (RRB)",
-            last_date: "2025-02-15",
+            last_date: "2026-02-15",
             short_desc: "रेल्वे रिक्रूटमेंट बोर्ड (RRB) ने गट ड पदांसाठी अर्ज मागवले आहेत.",
             status: "Active",
             created_at: new Date().toISOString()
