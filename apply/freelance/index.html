@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLPZYRNWL4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DLPZYRNWL4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Freelance | MahaJobPortal</title>
+    <meta name="description"
+        content="Apply for freelance opportunities at MahaJobPortal. Submit your portfolio and join our team.">
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Freelance Form Specific Styles */
+        .freelance-section {
+            padding: 50px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 80vh;
+        }
+
+        .form-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .form-header p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: #adb5bd;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 51, 102, 0.2);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .btn-submit i {
+            transition: transform 0.3s;
+        }
+
+        .btn-submit:hover i {
+            transform: translateX(5px);
+        }
+
+        .status-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        /* Input Icon Helpers */
+        .input-icon {
+            position: absolute;
+            right: 15px;
+            top: 42px;
+            /* Adjusted for label */
+            color: #adb5bd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span id="currentDate"></span>
+            <div class="social-tiny">
+                <a href="/coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-facebook"></i></a>
+                <a href="/coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-twitter"></i></a>
+                <a href="/coming-soon.html" style="color:#666; margin-left:10px;"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="../../index.html" class="logo" aria-label="MahaJobPortal Home">
+                    <img src="../../weblogo.png" alt="MahaJobPortal" style="height: 60px;">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="../../index.html"><i class="fas fa-home"></i> मुख्यपृष्ठ</a></li>
+                <li><a href="../../coming-soon.html">नवीन जाहिराती</a></li>
+                <li><a href="../../coming-soon.html">प्रवेशपत्र</a></li>
+                <li><a href="../../coming-soon.html">निकाल</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="freelance-section">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-header">
+                    <h2>Join as a Freelancer</h2>
+                    <p>We are looking for talented individuals. Fill out the form below to apply.</p>
+                </div>
+
+                <form id="freelanceForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                        <i class="fas fa-user input-icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com"
+                            required>
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="portfolio_link" class="form-label">Portfolio Link</label>
+                        <input type="url" id="portfolio_link" name="portfolio_link" class="form-control"
+                            placeholder="https://yourportfolio.com">
+                        <i class="fas fa-link input-icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text" class="form-label">Cover Letter / Message</label>
+                        <textarea id="text" name="text" class="form-control"
+                            placeholder="Tell us about your skills and experience..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        Submit Application <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <div id="statusMessage" class="status-message"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2026 MahaJobPortal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set Date
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('currentDate').innerText = new Date().toLocaleDateString('mr-IN', options);
+
+        // Form Submission Logic
+        const form = document.getElementById('freelanceForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusMsg = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // UI Loading State
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Submitting... <i class="fas fa-spinner fa-spin"></i>';
+            statusMsg.className = 'status-message'; // clear classes
+            statusMsg.style.display = 'none';
+
+            // Gather Data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                portfolio_link: document.getElementById('portfolio_link').value,
+                text: document.getElementById('text').value
+            };
+
+            try {
+                // Determine API Endpoint 
+                // Using relative path for Netlify Functions
+                const endpoint = '/api/submitFreelance';
+
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Submission failed');
+                }
+
+                // Success
+                statusMsg.textContent = '✅ Application submitted successfully! We will contact you soon.';
+                statusMsg.classList.add('status-success');
+                statusMsg.style.display = 'block';
+                form.reset();
+
+            } catch (error) {
+                console.error('Error:', error);
+                statusMsg.textContent = '❌ ' + error.message;
+                statusMsg.classList.add('status-error');
+                statusMsg.style.display = 'block';
+            } finally {
+                // Reset Button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit Application <i class="fas fa-paper-plane"></i>';
+            }
+        });
+    </script>
+</body>
+
+</html>
