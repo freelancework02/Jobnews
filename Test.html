@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare Pro | Complete Pet Care & Parenting Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --royal-blue: #1a3a8f;
+            --sky-blue: #87CEEB;
+            --coral-red: #FF6B6B;
+            --white: #ffffff;
+            --light-gray: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            --shadow-deep: 0 15px 40px rgba(26, 58, 143, 0.15);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(135, 206, 235, 0.2);
+            padding: 18px 0;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--royal-blue);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--coral-red);
+            margin-right: 10px;
+            font-size: 32px;
+        }
+
+        .logo span {
+            color: var(--sky-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 18px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 16px;
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--royal-blue);
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--royal-blue), var(--sky-blue));
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--royal-blue), #2a4bb0);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(26, 58, 143, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(26, 58, 143, 0.4);
+            background: linear-gradient(135deg, #2a4bb0, #3a5bc8);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--royal-blue);
+            border: 2px solid var(--royal-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(26, 58, 143, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            color: var(--royal-blue);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 120px;
+            background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(255, 255, 255, 1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(135, 206, 235, 0.15) 0%, rgba(135, 206, 235, 0) 70%);
+            top: -400px;
+            right: -200px;
+            z-index: 0;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-deep);
+            transform: perspective(1000px) rotateY(-8deg);
+            transition: var(--transition);
+        }
+
+        .hero-image img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: var(--royal-blue);
+        }
+
+        .hero h1 span {
+            color: var(--coral-red);
+            position: relative;
+        }
+
+        .hero h1 span:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(135, 206, 235, 0.3);
+            bottom: 5px;
+            left: 0;
+            z-index: -1;
+            border-radius: 5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(135, 206, 235, 0.1);
+            border: 1px solid rgba(135, 206, 235, 0.3);
+            color: var(--royal-blue);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .feature-badge i {
+            color: var(--coral-red);
+            margin-right: 8px;
+        }
+
+        /* Pet Type Selector */
+        .pet-selector {
+            background-color: var(--white);
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(135, 206, 235, 0.2);
+        }
+
+        .pet-selector-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .pet-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 15px 25px;
+            border-radius: 15px;
+            min-width: 120px;
+        }
+
+        .pet-option:hover {
+            background-color: rgba(135, 206, 235, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .pet-option.active {
+            background-color: rgba(26, 58, 143, 0.1);
+            border: 2px solid var(--royal-blue);
+        }
+
+        .pet-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(135, 206, 235, 0.2), rgba(255, 255, 255, 0.8));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 32px;
+            color: var(--royal-blue);
+            transition: var(--transition);
+        }
+
+        .pet-option:hover .pet-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--sky-blue), rgba(255, 255, 255, 0.9));
+        }
+
+        .pet-option.active .pet-icon {
+            background: linear-gradient(135deg, var(--royal-blue), var(--sky-blue));
+            color: var(--white);
+        }
+
+        .pet-name {
+            font-weight: 600;
+            color: var(--royal-blue);
+            font-size: 1.1rem;
+        }
+
+        /* Shop from Feed Section */
+        .shop-feed {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--royal-blue);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--royal-blue), var(--sky-blue));
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            max-width: 600px;
+            font-size: 1.1rem;
+        }
+
+        .feed-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feed-item {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .feed-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .feed-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--coral-red);
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .feed-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .feed-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .feed-item:hover .feed-image img {
+            transform: scale(1.05);
+        }
+
+        .feed-content {
+            padding: 25px;
+        }
+
+        .feed-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--royal-blue);
+            line-height: 1.4;
+        }
+
+        .feed-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .feed-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .feed-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--royal-blue);
+        }
+
+        .feed-price span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-left: 5px;
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-radius: 25px;
+        }
+
+        /* Learning Section */
+        .learning {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .learning-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .learning-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .learning-category {
+            display: inline-block;
+            background-color: rgba(135, 206, 235, 0.1);
+            color: var(--royal-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .learning-content {
+            padding: 30px;
+        }
+
+        .learning-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--royal-blue);
+            line-height: 1.4;
+        }
+
+        .learning-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .learning-meta i {
+            color: var(--sky-blue);
+        }
+
+        .learning-excerpt {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--royal-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            color: var(--coral-red);
+            gap: 10px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--royal-blue);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: rgba(135, 206, 235, 0.05);
+        }
+
+        .faq-question i {
+            color: var(--sky-blue);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+            color: var(--coral-red);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 30px 30px;
+            max-height: 500px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--royal-blue), var(--sky-blue));
+        }
+
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, rgba(26, 58, 143, 0.1), rgba(135, 206, 235, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--royal-blue);
+            font-size: 36px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--royal-blue), var(--sky-blue));
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--royal-blue);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--royal-blue) 0%, #2a4bb0 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta:before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            top: -300px;
+            right: -200px;
+        }
+
+        .cta:after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, rgba(255, 107, 107, 0) 70%);
+            bottom: -200px;
+            left: -100px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .btn-light {
+            background-color: var(--white);
+            color: var(--royal-blue);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-light:hover {
+            background-color: var(--sky-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f1c45;
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(to right, var(--sky-blue), var(--coral-red));
+            bottom: -8px;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .footer-column p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--sky-blue);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--coral-red);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1100px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 60px;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .header-actions .btn-secondary {
+                display: none;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta h2 {
+                font-size: 2.3rem;
+            }
+            
+            .service-card, .learning-card {
+                padding: 30px 20px;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .pet-selector-container {
+                gap: 15px;
+            }
+            
+            .pet-option {
+                min-width: 100px;
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .cta h2 {
+                font-size: 1.9rem;
+            }
+            
+            .feed-grid, .learning-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-paw"></i>
+                PetCare<span>Pro</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#learning">Learn</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn btn-secondary">
+                    <i class="fas fa-user"></i> Sign In
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Cart (0)
+                </button>
+            </div>
+            
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="feature-badge">
+                    <i class="fas fa-star"></i> Trusted by 10,000+ Pet Parents
+                </div>
+                <h1>Your Complete Guide to <span>Happy Pet Parenting</span></h1>
+                <p>From premium products to expert advice, we've got everything you need to give your furry friend the royal treatment they deserve.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-play-circle"></i> Start Shopping
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-book"></i> Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Happy dog with caring owner">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Type Selector -->
+    <section class="pet-selector">
+        <div class="container pet-selector-container">
+            <div class="pet-option active" data-pet="all">
+                <div class="pet-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <div class="pet-name">All Pets</div>
+            </div>
+            <div class="pet-option" data-pet="dog">
+                <div class="pet-icon">
+                    <i class="fas fa-dog"></i>
+                </div>
+                <div class="pet-name">Dogs</div>
+            </div>
+            <div class="pet-option" data-pet="cat">
+                <div class="pet-icon">
+                    <i class="fas fa-cat"></i>
+                </div>
+                <div class="pet-name">Cats</div>
+            </div>
+            <div class="pet-option" data-pet="owl">
+                <div class="pet-icon">
+                    <i class="fas fa-dove"></i>
+                </div>
+                <div class="pet-name">Birds</div>
+            </div>
+            <div class="pet-option" data-pet="hamster">
+                <div class="pet-icon">
+                    <i class="fas fa-otter"></i>
+                </div>
+                <div class="pet-name">Small Pets</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop from Feed Section -->
+    <section class="shop-feed" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Shop from Feed</h2>
+                    <p class="section-subtitle">Discover curated products loved by our pet community</p>
+                </div>
+                <button class="btn btn-primary">
+                    <i class="fas fa-store"></i> View All Products
+                </button>
+            </div>
+            
+            <div class="feed-grid">
+                <div class="feed-item" data-pet="dog">
+                    <div class="feed-badge">Best Seller</div>
+                    <div class="feed-image">
+                        <img src="https://images.unsplash.com/photo-1559056199-5a0e5b21f5bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Air Filter">
+                    </div>
+                    <div class="feed-content">
+                        <h3>AirPro Deep Clean Pet Air Purifier</h3>
+                        <p>Eliminate pet odors and dander with our advanced HEPA filter system</p>
+                        <div class="feed-footer">
+                            <div class="feed-price">$89.99 <span>$119.99</span></div>
+                            <button class="btn btn-primary btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feed-item" data-pet="dog">
+                    <div class="feed-image">
+                        <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dog Food">
+                    </div>
+                    <div class="feed-content">
+                        <h3>Real Dog Food - Chicken & Liver Recipe</h3>
+                        <p>Grain-free, all-natural nutrition with real meat and vegetables</p>
+                        <div class="feed-footer">
+                            <div class="feed-price">$24.99</div>
+                            <button class="btn btn-primary btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feed-item" data-pet="cat">
+                    <div class="feed-badge">New</div>
+                    <div class="feed-image">
+                        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cat Toy">
+                    </div>
+                    <div class="feed-content">
+                        <h3>Interactive Cat Toy Set with Feathers</h3>
+                        <p>Keep your feline friend entertained for hours with this engaging toy set</p>
+                        <div class="feed-footer">
+                            <div class="feed-price">$18.99</div>
+                            <button class="btn btn-primary btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feed-item" data-pet="dog">
+                    <div class="feed-image">
+                        <img src="https://images.unsplash.com/photo-1596273315327-5f059e266c08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Grooming Kit">
+                    </div>
+                    <div class="feed-content">
+                        <h3>Premium Pet Grooming Kit</h3>
+                        <p>Complete grooming tools for a healthy, shiny coat at home</p>
+                        <div class="feed-footer">
+                            <div class="feed-price">$34.99</div>
+                            <button class="btn btn-primary btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feed-item" data-pet="hamster">
+                    <div class="feed-badge">Sale</div>
+                    <div class="feed-image">
+                        <img src="https://images.unsplash.com/photo-1558322450-18d6c1d77d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Small Pet Habitat">
+                    </div>
+                    <div class="feed-content">
+                        <h3>Deluxe Small Pet Habitat with Accessories</h3>
+                        <p>Spacious living environment for hamsters, gerbils, and other small pets</p>
+                        <div class="feed-footer">
+                            <div class="feed-price">$49.99 <span>$64.99</span></div>
+                            <button class="btn btn-primary btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feed-item" data-pet="owl">
+                    <div class="feed-image">
+                        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bird Perch">
+                    </div>
+                    <div class="feed-content">
+                        <h3>Natural Wood Bird Perch & Play Gym</h3>
+                        <p>Multi-level play area for birds to exercise and explore safely</p>
+                        <div class="feed-footer">
+                            <div class="feed-price">$32.99</div>
+                            <button class="btn btn-primary btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning" id="learning">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Pet Care Made Easy</h2>
+                    <p class="section-subtitle">Expert advice to help you become the best pet parent</p>
+                </div>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-book-open"></i> View All Guides
+                </button>
+            </div>
+            
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <div class="learning-content">
+                        <span class="learning-category">Food & Nutrition</span>
+                        <h3>What Should You Feed a 3-Month-Old Puppy?</h3>
+                        <div class="learning-meta">
+                            <span><i class="far fa-calendar"></i> January 8, 2026</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <p class="learning-excerpt">Learn about the nutritional needs of young puppies and discover vet-approved feeding schedules and food recommendations for optimal growth and development.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="learning-card">
+                    <div class="learning-content">
+                        <span class="learning-category">Grooming</span>
+                        <h3>Winter Grooming Essentials for Furry Pets</h3>
+                        <div class="learning-meta">
+                            <span><i class="far fa-calendar"></i> January 7, 2026</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <p class="learning-excerpt">Protect your pet's skin and coat during cold months with our comprehensive winter grooming guide. Learn about moisturizing, paw care, and seasonal shedding management.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="learning-card">
+                    <div class="learning-content">
+                        <span class="learning-category">FAQs</span>
+                        <h3>Pet Care Guide: Top 50 Frequently Asked Questions</h3>
+                        <div class="learning-meta">
+                            <span><i class="far fa-calendar"></i> January 6, 2026</span>
+                            <span><i class="far fa-clock"></i> 15 min read</span>
+                        </div>
+                        <p class="learning-excerpt">Answers to the most common questions pet parents search for, covering health, behavior, nutrition, training, and emergency care for all types of pets.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Quick answers to common pet care questions</p>
+                </div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How often should I take my pet for a vet check-up?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Puppies and kittens should visit the vet every 3-4 weeks until they are about 4 months old. Adult pets should have at least one annual check-up, while senior pets (7+ years) benefit from bi-annual visits. Regular check-ups help catch potential health issues early.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What vaccinations does my pet need?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Core vaccinations for dogs include rabies, distemper, parvovirus, and adenovirus. For cats: rabies, feline distemper, calicivirus, and herpesvirus. Non-core vaccines depend on lifestyle and location. Always consult with your veterinarian for a personalized vaccination schedule.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can I tell if my pet is in pain?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Signs of pain in pets include decreased activity, limping, difficulty standing up, changes in eating or drinking habits, vocalizing more than usual, aggression, or hiding. Cats often become quieter and may stop grooming. If you suspect your pet is in pain, contact your veterinarian immediately.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What human foods are dangerous for pets?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Never feed pets: chocolate, grapes/raisins, onions, garlic, xylitol (found in sugar-free products), alcohol, caffeine, avocado, macadamia nuts, or raw yeast dough. Some human foods like cooked plain meat or vegetables may be safe in moderation, but always consult your vet first.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Our Premium Services</h2>
+                    <p class="section-subtitle">Complete care solutions for every stage of your pet's life</p>
+                </div>
+                <button class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> Book Service
+                </button>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card float">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Veterinary Care</h3>
+                    <p>Expert veterinary services including preventive care, diagnostics, surgery, and specialized treatments.</p>
+                </div>
+                
+                <div class="service-card float" style="animation-delay: 0.2s;">
+                    <div class="service-icon">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <h3>Professional Grooming</h3>
+                    <p>Gentle grooming services that keep your pet clean, healthy, and looking their absolute best.</p>
+                </div>
+                
+                <div class="service-card float" style="animation-delay: 0.4s;">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Pet Boarding</h3>
+                    <p>A home away from home where your pet will receive personalized care and plenty of playtime.</p>
+                </div>
+                
+                <div class="service-card float" style="animation-delay: 0.6s;">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Training & Behavior</h3>
+                    <p>Professional training programs to address behavior issues and strengthen your bond with your pet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Is Your Pet Getting Everything They Need?</h2>
+                <p>We bring to you the complete world of pet parenting – from premium products to expert care and advice. Join our community of happy pet parents today!</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-light">
+                        <i class="fas fa-shopping-bag"></i> Start Shopping
+                    </button>
+                    <button class="btn btn-secondary" style="background-color: rgba(255,255,255,0.2); color: white; border-color: white;">
+                        <i class="fas fa-phone-alt"></i> Schedule Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PetCare Pro</h3>
+                    <p>Your complete guide to pet parenting. We provide premium products, expert services, and educational resources for pet owners.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#shop"><i class="fas fa-chevron-right"></i> Shop</a></li>
+                        <li><a href="#learning"><i class="fas fa-chevron-right"></i> Learning Center</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-paw"></i> Veterinary Care</a></li>
+                        <li><a href="#"><i class="fas fa-cut"></i> Grooming</a></li>
+                        <li><a href="#"><i class="fas fa-home"></i> Boarding</a></li>
+                        <li><a href="#"><i class="fas fa-bone"></i> Training</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> Home Delivery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 123 PetCare Avenue, City, State 12345</a></li>
+                        <li><a href="tel:+11234567890"><i class="fas fa-phone"></i> (123) 456-7890</a></li>
+                        <li><a href="mailto:hello@petcarepro.com"><i class="fas fa-envelope"></i> help@petcarepro.com</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Mon-Sun: 7AM - 10PM</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 PetCare Pro. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--coral-red);"></i> for pets and their people</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenu.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(window.innerWidth <= 768) {
+                        navMenu.style.display = 'none';
+                    }
+                }
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.05)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+        
+        // Pet type selector
+        const petOptions = document.querySelectorAll('.pet-option');
+        const feedItems = document.querySelectorAll('.feed-item');
+        
+        petOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove active class from all options
+                petOptions.forEach(opt => opt.classList.remove('active'));
+                
+                // Add active class to clicked option
+                option.classList.add('active');
+                
+                // Get selected pet type
+                const selectedPet = option.getAttribute('data-pet');
+                
+                // Show/hide feed items based on selection
+                feedItems.forEach(item => {
+                    if (selectedPet === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const itemPet = item.getAttribute('data-pet');
+                        if (itemPet === selectedPet) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+                
+                // Animate visible items
+                setTimeout(() => {
+                    document.querySelectorAll('.feed-item[style="display: block"]').forEach((item, index) => {
+                        item.style.animationDelay = `${index * 0.1}s`;
+                        item.classList.add('float');
+                    });
+                }, 100);
+            });
+        });
+        
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Add to cart functionality
+        document.querySelectorAll('.btn-small, .btn-cart').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const productCard = this.closest('.feed-item, .product-card');
+                if (productCard) {
+                    const productName = productCard.querySelector('h3').textContent;
+                    const productPrice = productCard.querySelector('.feed-price, .price').textContent;
+                    
+                    // Animate button
+                    const originalHTML = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Added';
+                    this.style.backgroundColor = 'var(--coral-red)';
+                    
+                    // Update cart count
+                    const cartButton = document.querySelector('.header-actions .btn-primary');
+                    const currentCount = parseInt(cartButton.textContent.match(/\d+/)[0]) || 0;
+                    cartButton.innerHTML = `<i class="fas fa-shopping-cart"></i> Cart (${currentCount + 1})`;
+                    
+                    // Show notification (in a real app, this would be a toast notification)
+                    console.log(`Added "${productName}" to cart for ${productPrice}`);
+                    
+                    // Reset button after animation
+                    setTimeout(() => {
+                        this.innerHTML = originalHTML;
+                        this.style.backgroundColor = '';
+                    }, 2000);
+                }
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    
+                    if (entry.target.classList.contains('service-card')) {
+                        entry.target.classList.add('float');
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .feed-item, .learning-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // Initialize cart count
+        const cartButton = document.querySelector('.header-actions .btn-primary');
+        cartButton.innerHTML = '<i class="fas fa-shopping-cart"></i> Cart (0)';
+    </script>
+</body>
+</html>
