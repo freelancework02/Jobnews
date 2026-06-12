@@ -86,8 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Collect Form Data
             const jobData = {
                 title: document.getElementById('jobTitle').value,
-                department: document.getElementById('department').value,
-                location: document.getElementById('location').value,
+                department: document.getElementById('jobDepartment').value,
+                location: document.getElementById('jobLocation').value,
+                qualification: document.getElementById('jobQualification').value,
                 vacancy: document.getElementById('vacancy').value,
                 salary: document.getElementById('salary').value,
                 last_date: document.getElementById('lastDate').value,
@@ -235,8 +236,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Populate Form
         document.getElementById('jobTitle').value = job.title || '';
-        document.getElementById('department').value = job.department || '';
-        document.getElementById('location').value = job.location || '';
+        document.getElementById('jobDepartment').value = job.department || '';
+        document.getElementById('jobLocation').value = job.location || '';
+        document.getElementById('jobQualification').value = job.qualification || '';
         document.getElementById('vacancy').value = job.vacancy || '';
         document.getElementById('salary').value = job.salary || '';
 

@@ -1,5 +1,16 @@
 /* style.css - Modern News Portal Theme */
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+img { height: auto; }
+.ad-slot, .ad-container, [class*="ad-"] {
+  min-height: 90px;
+  background: #f1efea;
+  display: block;
+}
+.logo-img { width: 250px; height: 80px; object-fit: contain; }
+.job-card img, .post-thumbnail img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+}
 
 :root {
     --primary-color: #003366;
@@ -488,3 +499,62 @@ img {
 body {
     font-display: swap;
 }
+
+
+
+
+/* Nav Dropdown */
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger { cursor: pointer; display: flex; align-items: center; gap: 5px; }
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  min-width: 210px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  z-index: 9999;
+  padding: 6px 0;
+  list-style: none;
+  margin: 0;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu li { list-style: none; }
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 9px 16px;
+  color: #212529;
+  font-size: 0.85rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.nav-dropdown-menu li a:hover {
+  background: #f8f9fa;
+  color: #003366;
+}
+@media (max-width: 768px) {
+  .nav-dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: rgba(0,0,0,0.15);
+    border-radius: 4px;
+    margin: 4px 0 4px 12px;
+  }
+  .nav-dropdown-menu li a { color: rgba(255,255,255,0.9); font-size: 0.82rem; }
+}
+
+img { height: auto; max-width: 100%; }
+img[loading="lazy"] { content-visibility: auto; }
+.ad-slot, [class*="adsbygoogle"], ins.adsbygoogle {
+  min-height: 90px;
+  display: block;
+  background: #f8f9fa;
+}
+picture img { width: 100%; height: auto; }
+.nav-dropdown-menu a { transition: background-color 0.15s ease; }

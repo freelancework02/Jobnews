@@ -1,9 +1,16 @@
 User-agent: *
 Allow: /
+Allow: /category/
+Allow: /district/
+Allow: /qualification/
+Allow: /marathi-naukri.html
 Disallow: /admin.html
 Disallow: /admin-script.js
+Disallow: /admin-style.css
+Disallow: /login.html
 Disallow: /.netlify/
 Disallow: /test-supabase.js
-Disallow: /node_modules/
+Disallow: /coming-soon.html
 
 Sitemap: https://mahajobportal.in/sitemap.xml
+Sitemap: https://mahajobportal.in/sitemap-dynamic.xml

@@ -1,6 +1,12 @@
 {
+  "scripts": {
+    "build:img": "node scripts/convert-images.js"
+  },
   "dependencies": {
-    "@supabase/supabase-js": "^2.89.0",
+    "@supabase/supabase-js": "^2.105.4",
     "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
   }
 }

@@ -2,45 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mahajobportal.in/</loc>
-    <lastmod>2026-01-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://mahajobportal.in/index.html</loc>
-    <lastmod>2026-01-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://mahajobportal.in/login.html</loc>
-    <lastmod>2026-01-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://mahajobportal.in/about-us.html</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mahajobportal.in/contact-us.html</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mahajobportal.in/privacy-policy.html</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mahajobportal.in/terms.html</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <url><loc>https://mahajobportal.in/category/zp-bharti.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahajobportal.in/category/police-bharti.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahajobportal.in/category/talaathi-bharti.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahajobportal.in/category/jal-vibhag-bharti.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahajobportal.in/category/mpsc.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahajobportal.in/category/nhm-maharashtra.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahajobportal.in/category/gram-sevak-bharti.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahajobportal.in/marathi-naukri.html</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mahajobportal.in/district/jalgaon-zp-bharti.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/district/nashik-zp-bharti.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/district/pune-zp-bharti.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/district/aurangabad-zp-bharti.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/district/nagpur-zp-bharti.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/qualification/10th-pass-jobs.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/qualification/12th-pass-jobs.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/qualification/iti-diploma-jobs.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/qualification/graduate-jobs.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mahajobportal.in/about-us.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mahajobportal.in/contact-us.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mahajobportal.in/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mahajobportal.in/terms.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 </urlset>

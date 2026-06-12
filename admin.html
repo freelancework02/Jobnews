@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en-IN">
 
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,29 @@
             window.location.href = 'login.html';
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="admin-style.css">
+    <noscript>
+        </noscript>
+    <noscript>
+        </noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap">
+</noscript>
+<link rel="preload" as="style"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</noscript>
+<link rel="stylesheet" href="admin-style.css">
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+    </head>
 
 <body>
 
@@ -53,7 +71,7 @@
                 <h1>Dashboard</h1>
                 <div class="user-info">
                     <span>Welcome, Admin</span>
-                    <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="User">
+                    <img height="40" width="40" decoding="async" loading="lazy" src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="User">
                 </div>
             </header>
 
@@ -79,7 +97,7 @@
                                 <input type="file" id="adTopBanner" accept="image/*">
                                 <div class="preview-box" id="previewTopBanner"
                                     style="margin-top:10px; border:1px dashed #ccc; padding:10px; display:none;">
-                                    <img src="" style="max-width: 100%; height: auto;">
+                                    <img height="250" width="300" decoding="async" loading="lazy" src="" style="max-width: 100%; height: auto;">
                                 </div>
                             </div>
 
@@ -94,7 +112,7 @@
                                     <input type="file" id="adSidebar1" accept="image/*">
                                     <div class="preview-box" id="previewSidebar1"
                                         style="margin-top:10px; border:1px dashed #ccc; padding:10px; display:none;">
-                                        <img src="" style="max-width: 100%; height: auto;">
+                                        <img height="250" width="300" decoding="async" loading="lazy" src="" style="max-width: 100%; height: auto;">
                                     </div>
                                 </div>
 
@@ -106,7 +124,7 @@
                                     <input type="file" id="adSidebar2" accept="image/*">
                                     <div class="preview-box" id="previewSidebar2"
                                         style="margin-top:10px; border:1px dashed #ccc; padding:10px; display:none;">
-                                        <img src="" style="max-width: 100%; height: auto;">
+                                        <img height="250" width="300" decoding="async" loading="lazy" src="" style="max-width: 100%; height: auto;">
                                     </div>
                                 </div>
                             </div>
@@ -132,28 +150,93 @@
                                     <label>Job Title (Marathi/English)</label>
                                     <input type="text" id="jobTitle" placeholder="e.g. Talathi Bharti 2026" required>
                                 </div>
-                                <div class="form-group">
-                                    <label>Department / Company</label>
-                                    <input type="text" id="department" placeholder="e.g. Maharashtra Revenue Dept"
-                                        required>
-                                </div>
+<div class="form-group">
+  <label for="jobDepartment">Department / Category <span style="color:red">*</span></label>
+  <select id="jobDepartment" name="department" class="form-control" required>
+    <option value="">-- Select Department --</option>
+    <option value="Zilla Parishad">Zilla Parishad (ZP)</option>
+    <option value="Maharashtra Police">Maharashtra Police</option>
+    <option value="Revenue Department (Talaathi)">Revenue Department (Talaathi)</option>
+    <option value="Jal Vibhag (Water Resources)">Jal Vibhag / Water Resources</option>
+    <option value="MPSC">MPSC (Public Service Commission)</option>
+    <option value="NHM Maharashtra">NHM Maharashtra (Health Mission)</option>
+    <option value="Gram Sevak (Rural Development)">Gram Sevak (Rural Development)</option>
+    <option value="BMC (Municipal Corporation)">BMC / Municipal Corporation</option>
+    <option value="Arogya Vibhag">Arogya Vibhag (Health Dept)</option>
+    <option value="PWD (Public Works)">PWD (Public Works Dept)</option>
+    <option value="Forest Department">Forest Department</option>
+    <option value="State Excise Department">State Excise Department</option>
+    <option value="Maharashtra Fire Services">Maharashtra Fire Services</option>
+    <option value="Railway">Railway (RRB / RRC)</option>
+    <option value="Maharashtra PSC">Maharashtra PSC</option>
+    <option value="Other Maharashtra Govt">Other Maharashtra Govt</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="jobLocation">District / Location <span style="color:red">*</span></label>
+  <select id="jobLocation" name="location" class="form-control" required>
+    <option value="Maharashtra (State-wide)">Maharashtra (State-wide)</option>
+    <option value="Jalgaon">Jalgaon</option>
+    <option value="Nashik">Nashik</option>
+    <option value="Pune">Pune</option>
+    <option value="Aurangabad">Aurangabad (Sambhajinagar)</option>
+    <option value="Nagpur">Nagpur</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Thane">Thane</option>
+    <option value="Kolhapur">Kolhapur</option>
+    <option value="Solapur">Solapur</option>
+    <option value="Satara">Satara</option>
+    <option value="Sangli">Sangli</option>
+    <option value="Latur">Latur</option>
+    <option value="Nanded">Nanded</option>
+    <option value="Amravati">Amravati</option>
+    <option value="Akola">Akola</option>
+    <option value="Wardha">Wardha</option>
+    <option value="Chandrapur">Chandrapur</option>
+    <option value="Yavatmal">Yavatmal</option>
+    <option value="Beed">Beed</option>
+    <option value="Osmanabad">Osmanabad</option>
+    <option value="Raigad">Raigad</option>
+    <option value="Ratnagiri">Ratnagiri</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="jobQualification">Minimum Qualification <span style="color:red">*</span></label>
+  <select id="jobQualification" name="qualification" class="form-control" required>
+    <option value="">-- Select Qualification --</option>
+    <option value="8th Pass">8th Pass</option>
+    <option value="10th Pass (SSC)">10th Pass (SSC)</option>
+    <option value="12th Pass (HSC)">12th Pass (HSC)</option>
+    <option value="ITI Certificate">ITI Certificate</option>
+    <option value="Diploma (Polytechnic)">Diploma (Polytechnic)</option>
+    <option value="Graduate (Any Stream)">Graduate (Any Stream)</option>
+    <option value="B.E. / B.Tech">B.E. / B.Tech (Engineering)</option>
+    <option value="B.Sc Agriculture">B.Sc Agriculture</option>
+    <option value="Medical (MBBS/BDS)">Medical (MBBS / BDS)</option>
+    <option value="B.Sc Nursing / GNM">B.Sc Nursing / GNM / ANM</option>
+    <option value="D.Pharm / B.Pharm">D.Pharm / B.Pharm</option>
+    <option value="Post Graduate (MA/MSc/MCom)">Post Graduate (MA/MSc/MCom)</option>
+    <option value="LLB (Law)">LLB (Law)</option>
+    <option value="CA / ICWA">CA / ICWA</option>
+  </select>
+</div>
+                                
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>Location</label>
-                                    <input type="text" id="location" placeholder="e.g. All Maharashtra">
-                                </div>
+                                
                                 <div class="form-group">
                                     <label>Total Vacancy</label>
                                     <input type="text" id="vacancy" placeholder="e.g. 4500 Posts">
                                 </div>
                             </div>
-
+                            
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Salary (Pay Scale)</label>
-                                    <input type="text" id="salary" placeholder="e.g. ₹25,000 - ₹80,000">
+                                    <input type="text" id="salary" placeholder="e.g. â‚¹25,000 - â‚¹80,000">
                                 </div>
                                 <div class="form-group">
                                     <label>Last Date to Apply</label>
@@ -251,8 +334,7 @@
 
         </main>
     </div>
-
-    <script src="admin-script.js"></script>
+<script defer src="/admin-script.js"></script>
 </body>
 
 </html>
